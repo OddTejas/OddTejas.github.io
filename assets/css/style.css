@@ -1,0 +1,9 @@
+body{
+    background-color: #FFFAEF;
+}
+#logoText{
+    padding-left:2% ;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #E74C3C;
+}
