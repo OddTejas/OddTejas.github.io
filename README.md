@@ -2,12 +2,12 @@
 My personal website:
 
 ## goals:
-Blazing fast
-Accessible
-easy to navigate
-use interior design philosphy
-not cluttered but not minimalist.
-high optimization
+- Blazing fast
+- Accessible
+- easy to navigate
+- use interior design philosphy
+- not cluttered but not minimalist.
+- high optimization
 
 ## Design principles
 It should answer;

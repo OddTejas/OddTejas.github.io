@@ -1,9 +1,28 @@
 body{
     background-color: #FFFAEF;
+    margin: 0;
 }
+
 #logoText{
     padding-left:2% ;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #E74C3C;
+}
+
+#heroImage{
+     width: 100%;
+    height: auto;
+}
+#heroText{
+    font-family: "Playfair Display", serif;
+    font-size: 4.5rem;
+    color: #00143A ;
+}
+.hero {
+    margin: 0rem;
+}
+
+.main{
+    margin: 2rem;
 }
