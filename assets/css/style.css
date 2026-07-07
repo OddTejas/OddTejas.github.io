@@ -9,6 +9,11 @@ body{
     font-weight: 700;
     color: #E74C3C;
 }
+h1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color: #E74C3C;
+}
 
 #heroImage{
      width: 100%;
@@ -16,7 +21,7 @@ body{
 }
 #heroText{
     font-family: "Playfair Display", serif;
-    font-size: 4.5rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
     color: #00143A ;
 }
 .hero {
@@ -25,4 +30,16 @@ body{
 
 .main{
     margin: 2rem;
+}
+h2{
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1rem, 5vw, 2rem);
+    color: #00143A ;
+    font-weight: 400;
+}
+p{
+    font-family: "Playfair Display", serif;
+    font-size: clamp(0.7rem, 4vw, 1.5rem);
+    color: #00143A ;
+    font-weight: 400;
 }
