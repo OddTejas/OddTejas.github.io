@@ -8,6 +8,9 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #E74C3C;
+    font-size: clamp(1rem, 2vw, 2rem);
+    margin-bottom: clamp(0.2rem, 0.5vw, 1rem);
+    margin-top: clamp(0.2rem, 0.5vw, 1rem);
 }
 h1{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -21,7 +24,7 @@ h1{
 }
 #heroText{
     font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 5vw, 4.5rem);
+    font-size: clamp(2rem, 5vw, 5rem);
     color: #00143A ;
 }
 .hero {
@@ -39,7 +42,24 @@ h2{
 }
 p{
     font-family: "Playfair Display", serif;
-    font-size: clamp(0.7rem, 4vw, 1.5rem);
+    font-size: clamp(0.7rem, 3vw, 1.5rem);
     color: #00143A ;
     font-weight: 400;
+    max-width: 60ch;
+    
+}
+#about_grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap:clamp(1rem 1.5vw 2rem);
+
+    max-width:1200px;
+
+    margin:1%;
+
+    padding:3rem 2rem;
+}
+@media(max-width:780px){
+    #about_grid{
+    grid-template-columns: 1fr;}
 }
