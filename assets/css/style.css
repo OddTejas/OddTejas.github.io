@@ -8,7 +8,7 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: #E74C3C;
-    font-size: clamp(1rem, 2vw, 2rem);
+    font-size: clamp(1rem, 4vw, 2rem);
     margin-bottom: clamp(0.2rem, 0.5vw, 1rem);
     margin-top: clamp(0.2rem, 0.5vw, 1rem);
 }
@@ -51,7 +51,7 @@ p{
 #about_grid{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    gap:clamp(1rem 1.5vw 2rem);
+    gap:clamp(1rem, 1.5vw, 2rem);
 
     max-width:1200px;
 
