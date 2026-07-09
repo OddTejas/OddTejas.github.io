@@ -26,6 +26,7 @@ h1{
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 5vw, 5rem);
     color: #00143A ;
+    padding-left: 2rem;
 }
 .hero {
     margin: 0rem;
@@ -53,13 +54,92 @@ p{
     grid-template-columns: 1fr 2fr;
     gap:clamp(1rem, 1.5vw, 2rem);
 
-    max-width:1200px;
+    max-width:1100px;
 
     margin:1%;
 
     padding:3rem 2rem;
 }
-@media(max-width:780px){
+@media(max-width:768px){
     #about_grid{
     grid-template-columns: 1fr;}
+}
+#label{
+    margin: 0px;
+    font-size: clamp(1rem,2vw,3rem);
+}
+#Evan{
+    font-size: clamp(1rem,2vw,3rem);
+    margin-top: 0;
+}
+
+
+/*flex box for the desk */
+.desk {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    margin: 2rem clamp(1rem,2vw, 3rem);
+  
+}
+
+.card {
+    flex: 1 1 300px;
+
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #3C3F0E;
+    
+    
+}
+#desk{
+    text-align: center;
+    font-size: clamp(1.7rem, 2.7vw, 4rem);
+}
+.desk_subheading{
+    color: #FFFAEF;
+    max-width: 30ch;
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    padding:1rem;
+    margin: 0;
+}
+.desk_heading{
+    color: #FFFAEF;
+    max-width: 30ch;
+    font-family:"Helvetica Neue", Helvetica, sans-serif ;
+    font-size: clamp(1.7rem, 2.7vw, 3rem);
+    padding:1rem;
+    margin: 0;
+}
+#desk_desc{
+    padding-left:2rem ;
+    font-size: clamp(1.2rem, 1.7vw, 3rem);
+   
+}
+.featuredCard{
+     flex: 3 1 300px;
+
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: #3C3F0E;
+}
+footer{
+    padding: 2rem;
+    color:#FFFAEF ;
+    background-color: #00143A ;
+    font-family:"Helvetica Neue", Helvetica, sans-serif;
+    font-size: clamp(.4rem, 1vw, 2rem);
+}
+
+/*Footer grid*/
+#footerGrid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1rem;
+    padding:3rem 2rem;
+   
+}
+.footerGrid{
+    padding-left: 2rem;
 }
