@@ -1,13 +1,38 @@
+/*Some tokens for quick use*/
+:root{
+    /* Colors */
+    --bg: #FFFAEF;
+    --text: #00143A;
+    --accent: #E74C3C;
+    --accent2:#3C3F0E;
+
+    /* Typography */
+    --text-sm: 0.9rem;
+    --text-base: 1rem;
+    --text-lg: 1.5rem;
+    --text-xl: clamp(2rem, 4vw, 3.5rem);
+
+    /* Spacing */
+    --space-xs: .5rem;
+    --left-spacing: 2%;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+
+    /* Radius */
+    --radius: 12px;
+}
 body{
-    background-color: #FFFAEF;
+    background-color:var(--bg);
     margin: 0;
 }
 
 #logoText{
-    padding-left:2% ;
+    padding-left:var(--left-spacing) ;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    color: #E74C3C;
+    color: var(--accent);
     font-size: clamp(1rem, 4vw, 2rem);
     margin-bottom: clamp(0.2rem, 0.5vw, 1rem);
     margin-top: clamp(0.2rem, 0.5vw, 1rem);
@@ -15,7 +40,7 @@ body{
 h1{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
-    color: #E74C3C;
+    color:var(--accent);
 }
 
 #heroImage{
@@ -25,8 +50,8 @@ h1{
 #heroText{
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 5vw, 5rem);
-    color: #00143A ;
-    padding-left: 2rem;
+    color:var(--text) ;
+    padding-left: var(--left-spacing);
 }
 .hero {
     margin: 0rem;
@@ -38,7 +63,7 @@ h1{
 h2{
     font-family: "Playfair Display", serif;
     font-size: clamp(1rem, 5vw, 2rem);
-    color: #00143A ;
+    color: var(--text);
     font-weight: 400;
 }
 p{
@@ -47,22 +72,20 @@ p{
     color: #00143A ;
     font-weight: 400;
     max-width: 60ch;
+    line-height: 1.6;
     
 }
 #about_grid{
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap:clamp(1rem, 1.5vw, 2rem);
-
     max-width:1100px;
-
-    margin:1%;
-
-    padding:3rem 2rem;
+    padding:2rem var(--left-spacing) ;
 }
 @media(max-width:768px){
     #about_grid{
     grid-template-columns: 1fr;}
+    
 }
 #label{
     margin: 0px;
@@ -71,6 +94,37 @@ p{
 #Evan{
     font-size: clamp(1rem,2vw,3rem);
     margin-top: 0;
+}
+/*NavBar with flexbox*/
+.navbar{
+    padding-left: var(--left-spacing);
+    display: flex;
+    gap: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+}
+.link{
+    color: var(--text);
+    font-size: clamp(1rem,1.7vw,2rem);
+    text-decoration: none;
+    position: relative;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-family:"Playfair Display", serif;
+    transition: background-color 0.2s ease;
+    transition: color 0.2s ease;
+}
+#nav_desc{
+    font-size: clamp(1.5rem,1.9vw,2.5rem);
+    padding-left: var(--left-spacing);
+}
+
+    
+.link:hover,
+.link:focus-visible{
+    background-color: var(--accent);
+    color: white; /* or keep var(--text) if the contrast is good */
 }
 
 
@@ -89,7 +143,7 @@ p{
 
     padding: 1.5rem;
     border-radius: 12px;
-    background: #3C3F0E;
+    background:var(--accent2);
     
     
 }
@@ -98,14 +152,14 @@ p{
     font-size: clamp(1.7rem, 2.7vw, 4rem);
 }
 .desk_subheading{
-    color: #FFFAEF;
+    color:var(--bg);
     max-width: 30ch;
     font-size: clamp(1rem, 1.7vw, 2rem);
     padding:1rem;
     margin: 0;
 }
 .desk_heading{
-    color: #FFFAEF;
+    color: var(--bg);
     max-width: 30ch;
     font-family:"Helvetica Neue", Helvetica, sans-serif ;
     font-size: clamp(1.7rem, 2.7vw, 3rem);
@@ -122,11 +176,11 @@ p{
 
     padding: 1.5rem;
     border-radius: 12px;
-    background: #3C3F0E;
+    background: var(--accent2);
 }
 footer{
     padding: 2rem;
-    color:#FFFAEF ;
+    color:var(--bg) ;
     background-color: #00143A ;
     font-family:"Helvetica Neue", Helvetica, sans-serif;
     font-size: clamp(.4rem, 1vw, 2rem);
