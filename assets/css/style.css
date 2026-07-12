@@ -58,7 +58,7 @@ h1{
 }
 
 .main{
-    margin: 2rem;
+    margin: var(--space-md);
 }
 h2{
     font-family: "Playfair Display", serif;
@@ -87,12 +87,15 @@ p{
     grid-template-columns: 1fr;}
     
 }
+#aboutText{
+    font-size:clamp(1rem,1.5vw,2.7rem)
+}
 #label{
     margin: 0px;
     font-size: clamp(1rem,2vw,3rem);
 }
 #Evan{
-    font-size: clamp(1rem,2vw,3rem);
+    font-size: clamp(1.4rem,2.5vw,3rem);
     margin-top: 0;
 }
 /*NavBar with flexbox*/
@@ -100,23 +103,33 @@ p{
     padding-left: var(--left-spacing);
     display: flex;
     gap: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-top: clamp(1rem,2vw,3rem);
+    margin-bottom: clamp(1rem,2vw,3rem);
 
 }
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+        align-self: left;
+        gap:var(--space-xs);
+    }
+}
 .link{
-    color: var(--text);
+    color: var(--accent);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: clamp(1rem,1.7vw,2rem);
     text-decoration: none;
     position: relative;
     padding: 0.3rem 0.6rem;
     border-radius: 6px;
-    font-family:"Playfair Display", serif;
     transition: background-color 0.2s ease;
     transition: color 0.2s ease;
 }
+
 #nav_desc{
-    font-size: clamp(1.5rem,1.9vw,2.5rem);
+    font-size:clamp(1.2rem,2.5vw,3rem);
     padding-left: var(--left-spacing);
 }
 
