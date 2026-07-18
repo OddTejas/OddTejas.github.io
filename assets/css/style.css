@@ -36,38 +36,35 @@ body{
     font-size: clamp(1rem, 4vw, 2rem);
     margin-bottom: clamp(0.2rem, 0.5vw, 1rem);
     margin-top: clamp(0.2rem, 0.5vw, 1rem);
-}
-h1{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    color:var(--accent);
+    
 }
 
-#heroImage{
-     width: 100%;
-    height: auto;
-}
 #heroText{
     font-family: "Playfair Display", serif;
     font-size: clamp(2rem, 5vw, 5rem);
     color:var(--text) ;
     padding-left: var(--left-spacing);
 }
-.hero {
-    margin: 0rem;
-}
 
 .main{
     margin: var(--space-md);
 }
+
+h1{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    color:var(--accent);
+}
+
 h2{
     font-family: "Playfair Display", serif;
     font-size: clamp(1rem, 5vw, 2rem);
     color: var(--text);
     font-weight: 400;
 }
+
 p{
-    font-family: "Playfair Display", serif;
+    font-family: "Atkinson Hyperlegible","Playfair Display", serif;
     font-size: clamp(0.7rem, 3vw, 1.5rem);
     color: #00143A ;
     font-weight: 400;
@@ -75,46 +72,10 @@ p{
     line-height: 1.6;
     
 }
-#about_grid{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap:clamp(1rem, 1.5vw, 2rem);
-    max-width:1100px;
-    padding:2rem var(--left-spacing) ;
-}
-@media(max-width:768px){
-    #about_grid{
-    grid-template-columns: 1fr;}
-    
-}
-#aboutText{
-    font-size:clamp(1rem,1.5vw,2.7rem)
-}
-#label{
-    margin: 0px;
-    font-size: clamp(1rem,2vw,3rem);
-}
-#Evan{
-    font-size: clamp(1.4rem,2.5vw,3rem);
-    margin-top: 0;
-}
-/*NavBar with flexbox*/
-.navbar{
-    padding-left: var(--left-spacing);
-    display: flex;
-    gap: 2rem;
-    margin-top: clamp(1rem,2vw,3rem);
-    margin-bottom: clamp(1rem,2vw,3rem);
-
-}
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: var(--space-sm);
-        align-items: flex-start;
-        align-self: left;
-        gap:var(--space-xs);
-    }
+a{
+    color: var(--accent);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration: none;
 }
 .link{
     color: var(--accent);
@@ -127,12 +88,6 @@ p{
     transition: background-color 0.2s ease;
     transition: color 0.2s ease;
 }
-
-#nav_desc{
-    font-size:clamp(1.2rem,2.5vw,3rem);
-    padding-left: var(--left-spacing);
-}
-
     
 .link:hover,
 .link:focus-visible{
@@ -141,56 +96,6 @@ p{
 }
 
 
-/*flex box for the desk */
-.desk {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-
-    margin: 2rem clamp(1rem,2vw, 3rem);
-  
-}
-
-.card {
-    flex: 1 1 300px;
-
-    padding: 1.5rem;
-    border-radius: 12px;
-    background:var(--accent2);
-    
-    
-}
-#desk{
-    text-align: center;
-    font-size: clamp(1.7rem, 2.7vw, 4rem);
-}
-.desk_subheading{
-    color:var(--bg);
-    max-width: 30ch;
-    font-size: clamp(1rem, 1.7vw, 2rem);
-    padding:1rem;
-    margin: 0;
-}
-.desk_heading{
-    color: var(--bg);
-    max-width: 30ch;
-    font-family:"Helvetica Neue", Helvetica, sans-serif ;
-    font-size: clamp(1.7rem, 2.7vw, 3rem);
-    padding:1rem;
-    margin: 0;
-}
-#desk_desc{
-    padding-left:2rem ;
-    font-size: clamp(1.2rem, 1.7vw, 3rem);
-   
-}
-.featuredCard{
-     flex: 3 1 300px;
-
-    padding: 1.5rem;
-    border-radius: 12px;
-    background: var(--accent2);
-}
 /*Footer grid*/
 footer{
     padding: 2rem;
@@ -223,5 +128,11 @@ footer{
     text-align: center;
 }
 
-
+/*random but useful functions*/
+#incoming{
+    color: var(--bg);
+    background-color: var(--accent);
+    width: 100%;
+    padding-left:var(--space-md) ;
+}
 

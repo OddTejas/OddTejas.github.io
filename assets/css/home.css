@@ -1,0 +1,110 @@
+#heroImage{
+     width: 100%;
+    height: auto;
+}
+
+.hero {
+    margin: 0rem;
+}
+#about_grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap:clamp(1rem, 1.5vw, 2rem);
+    max-width:1100px;
+    padding:2rem var(--left-spacing) ;
+}
+@media(max-width:768px){
+    #about_grid{
+    grid-template-columns: 1fr;}
+    
+}
+#aboutText{
+    font-size:clamp(1rem,1.5vw,2.7rem);
+     font-family:  "Playfair Display", serif;
+}
+#label{
+    margin: 0px;
+    font-size: clamp(1rem,2vw,3rem);
+}
+#Evan{
+    font-size: clamp(1.4rem,2.5vw,3rem);
+    margin-top: 0;
+}
+/*NavBar with flexbox*/
+.navbar{
+    padding-left: var(--left-spacing);
+    display: flex;
+    gap: 2rem;
+    margin-top: clamp(1rem,2vw,3rem);
+    margin-bottom: clamp(1rem,2vw,3rem);
+
+}
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: var(--space-sm);
+        align-items: flex-start;
+        align-self: left;
+        gap:var(--space-xs);
+    }
+}
+#nav_desc{
+    font-size:clamp(1.2rem,2.5vw,3rem);
+    padding-left: var(--left-spacing);
+    font-family:  "Playfair Display", serif;
+}
+
+
+/*flex box for the desk */
+.desk {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    margin: 2rem clamp(1rem,2vw, 3rem);
+  
+}
+
+.card {
+    flex: 1 1 300px;
+
+    padding: 1.5rem;
+    border-radius: 12px;
+    background:var(--accent2);
+    
+    
+}
+#desk{
+    text-align: center;
+    font-size: clamp(1.7rem, 2.7vw, 4rem);
+    font-family:  "Playfair Display", serif;
+}
+.desk_subheading{
+    color:var(--bg);
+    max-width: 30ch;
+    font-size: clamp(1rem, 1.7vw, 2rem);
+    padding:1rem;
+    margin: 0;
+    font-family:  "Playfair Display", serif;
+}
+.desk_heading{
+    color: var(--bg);
+    max-width: 30ch;
+    font-family:"Helvetica Neue", Helvetica, sans-serif ;
+    font-size: clamp(1.7rem, 2.7vw, 3rem);
+    padding:1rem;
+    margin: 0;
+}
+#desk_desc{
+    padding-left:2rem ;
+    font-size: clamp(1.2rem, 1.7vw, 3rem);
+    font-family:  "Playfair Display", serif;
+   
+}
+.featuredCard{
+     flex: 3 1 300px;
+
+    padding: 1.5rem;
+    border-radius: 12px;
+    background: var(--accent2);
+}
