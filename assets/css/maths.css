@@ -1,0 +1,14 @@
+#wanderings{
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1.5rem, 5vw, 2.6rem);
+    color: var(--text);
+    font-weight: 400;
+    text-align: center;
+}
+.wander{
+    display: grid;
+    grid-template-columns:0.5fr;
+}
+.mathCard{
+    
+}
