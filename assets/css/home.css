@@ -98,14 +98,16 @@
 
     padding: 1.5rem;
     border-radius: 12px;
-    background: var(--accent2);
+    background:var(--accent2);
+   
+
 }
 .card {
     flex: 1 1 300px;
 
     padding: 1.5rem;
     border-radius: 12px;
-    background:var(--accent2);
+    background:var(--accent2-light);
     
     
 }
