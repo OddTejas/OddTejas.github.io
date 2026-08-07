@@ -1,7 +1,7 @@
 
 #wanderings{
     font-family: "Playfair Display", serif;
-    font-size: clamp(1.5rem, 5vw, 2.6rem);
+    font-size: var(--text-maths-heading);
     color: var(--text);
     font-weight: 400;
     text-align: center;
@@ -23,21 +23,21 @@
 
 }
 .cardTitle{
-    max-width: 30ch;
+    max-width: var(--width-card-text);
     font-family:"Helvetica Neue", Helvetica, sans-serif ;
-    font-size: clamp(1rem, 2.2vw, 3rem);
+    font-size: var(--text-maths-card-title);
     color: var(--bg);
     padding:1rem;
     margin: 0;
    
     padding-bottom: 0;
-    max-width: 35ch;
+    max-width: var(--width-card-title);
     text-align: left;
 }
 .cardDesc{
-    max-width: 30ch;
+    max-width: var(--width-card-text);
     font-family:"Playfair Display", serif;
-    font-size:clamp(1rem,1.5vw,2rem);
+    font-size: var(--text-card-body);
     color: var(--bg);
     padding-left:2rem;
     margin: 0;
@@ -45,7 +45,7 @@
 }
 .cardLink{
     color: var(--bg);
-    font-size:clamp(0.7rem,1.5vw,2rem);
+    font-size: var(--text-card-link);
     text-align: center;
 
     padding-left: 5%;

@@ -11,6 +11,29 @@
     --text-base: 1rem;
     --text-lg: 1.5rem;
     --text-xl: clamp(2rem, 4vw, 3.5rem);
+    --text-body: clamp(0.7rem, 3vw, 1.5rem);
+    --text-logo: clamp(1rem, 4vw, 2rem);
+    --text-link: clamp(1rem, 1.7vw, 2rem);
+    --text-heading: clamp(1rem, 5vw, 2rem);
+    --text-display: clamp(2rem, 5vw, 5rem);
+    --text-subtitle: clamp(1.5rem, 4vw, 3rem);
+    --text-footer: clamp(0.9rem, 1.2vw, 2rem);
+    --text-introduction: clamp(1rem, 1.5vw, 2.7rem);
+    --text-section-label: clamp(1rem, 2vw, 3rem);
+    --text-section-title: clamp(1.4rem, 2.5vw, 3rem);
+    --text-section-lead: clamp(1.2rem, 2.5vw, 3rem);
+    --text-feature-title: clamp(1.7rem, 2.7vw, 4rem);
+    --text-card-body: clamp(1rem, 1.5vw, 2rem);
+    --text-card-title: clamp(1.7rem, 2.7vw, 3rem);
+    --text-card-link: clamp(0.7rem, 1.5vw, 2rem);
+    --text-maths-heading: clamp(1.5rem, 5vw, 2.6rem);
+    --text-maths-card-title: clamp(1rem, 2.2vw, 3rem);
+
+    /* Content widths */
+    --width-content: 1100px;
+    --width-reading: 60ch;
+    --width-card-text: 30ch;
+    --width-card-title: 35ch;
 
     /* Spacing */
     --space-xs: .5rem;
@@ -33,7 +56,7 @@ body{
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     color: var(--accent);
-    font-size: clamp(1rem, 4vw, 2rem);
+    font-size: var(--text-logo);
     margin-bottom: clamp(0.2rem, 0.5vw, 1rem);
     margin-top: clamp(0.2rem, 0.5vw, 1rem);
     
@@ -41,20 +64,20 @@ body{
 
 #heroText{
     font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: var(--text-display);
     color:var(--text) ;
     padding-left: var(--left-spacing);
 }
 #headingText{
     font-family: "Playfair Display", serif;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: var(--text-display);
     color:var(--text) ;
     padding-left: var(--left-spacing);
     margin-bottom: 0;
 }
 #subtext{
     font-family: "Playfair Display", serif;
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: var(--text-subtitle);
     color:var(--text);
     padding-left: 4%;
     margin-top: 0%;
@@ -71,17 +94,17 @@ h1{
 
 h2{
     font-family: "Playfair Display", serif;
-    font-size: clamp(1rem, 5vw, 2rem);
+    font-size: var(--text-heading);
     color: var(--text);
     font-weight: 400;
 }
 
 p{
     font-family: "Atkinson Hyperlegible","Playfair Display", serif;
-    font-size: clamp(0.7rem, 3vw, 1.5rem);
-    color: #00143A ;
+    font-size: var(--text-body);
+    color: var(--text);
     font-weight: 400;
-    max-width: 60ch;
+    max-width: var(--width-reading);
     line-height: 1.6;
     
 }
@@ -93,7 +116,7 @@ a{
 .link{
     color: var(--accent);
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: clamp(1rem,1.7vw,2rem);
+    font-size: var(--text-link);
     text-decoration: none;
     position: relative;
     padding: 0.3rem 0.6rem;
@@ -113,9 +136,9 @@ a{
 footer{
     padding: 2rem;
     color:var(--bg) ;
-    background-color: #00143A ;
+    background-color: var(--text);
     font-family:"Helvetica Neue", Helvetica, sans-serif;
-    font-size: clamp(0.9rem, 1.2vw, 2rem);
+    font-size: var(--text-footer);
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -132,7 +155,7 @@ footer{
         display: grid;
         grid-template-columns: 1fr;
         gap:clamp(1rem, 1.5vw, 2rem);
-        max-width:1100px;
+        max-width:var(--width-content);
         padding:2rem 2rem;
         text-align: left;
     }

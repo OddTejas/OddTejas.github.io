@@ -10,7 +10,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap:clamp(1rem, 1.5vw, 2rem);
-    max-width:1100px;
+    max-width:var(--width-content);
     padding:2rem var(--left-spacing) ;
 }
 @media(max-width:768px){
@@ -19,15 +19,15 @@
     
 }
 #aboutText{
-    font-size:clamp(1rem,1.5vw,2.7rem);
+    font-size: var(--text-introduction);
      font-family:  "Playfair Display", serif;
 }
 #label{
     margin: 0px;
-    font-size: clamp(1rem,2vw,3rem);
+    font-size: var(--text-section-label);
 }
 #Evan{
-    font-size: clamp(1.4rem,2.5vw,3rem);
+    font-size: var(--text-section-title);
     margin-top: 0;
 }
 /*NavBar with flexbox*/
@@ -49,7 +49,7 @@
     }
 }
 #nav_desc{
-    font-size:clamp(1.2rem,2.5vw,3rem);
+    font-size: var(--text-section-lead);
     padding-left: var(--left-spacing);
     font-family:  "Playfair Display", serif;
 }
@@ -68,28 +68,28 @@
 
 #desk{
     text-align: center;
-    font-size: clamp(1.7rem, 2.7vw, 4rem);
+    font-size: var(--text-feature-title);
     font-family:  "Playfair Display", serif;
 }
 .desk_subheading{
     color:var(--bg);
-    max-width: 30ch;
-    font-size: clamp(1rem, 1.5vw, 2rem);
+    max-width: var(--width-card-text);
+    font-size: var(--text-card-body);
     padding:1rem;
     margin: 0;
     font-family:  "Playfair Display", serif;
 }
 .desk_heading{
     color: var(--bg);
-    max-width: 30ch;
+    max-width: var(--width-card-text);
     font-family:"Helvetica Neue", Helvetica, sans-serif ;
-    font-size: clamp(1.7rem, 2.7vw, 3rem);
+    font-size: var(--text-card-title);
     padding:1rem;
     margin: 0;
 }
 #desk_desc{
     padding-left:2rem ;
-    font-size: clamp(1.2rem, 1.7vw, 3rem);
+    font-size: var(--text-section-lead);
     font-family:  "Playfair Display", serif;
    
 }
