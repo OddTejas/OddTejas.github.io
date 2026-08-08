@@ -153,7 +153,12 @@ a{
     row-gap: var(--space-lg);
     align-items: start;
 }
-
+@media (max-width: 768px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
 .footerGrid p,
 .footerGrid a{
     color: var(--bg);
