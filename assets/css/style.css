@@ -61,6 +61,7 @@ body{
     font-weight: 700;
     color: var(--accent);
     font-size: var(--text-logo);
+    padding-top: clamp(0.2rem, 0.5vw, 1rem);
     margin-bottom: clamp(0.2rem, 0.5vw, 1rem);
     margin-top: clamp(0.2rem, 0.5vw, 1rem);
     
@@ -70,6 +71,10 @@ body{
     font-family: var(--serif);
     font-size: var(--text-display);
     color:var(--text) ;
+}
+#heroImage{
+     width: 100%;
+    height: auto;
 }
 #headingText{
     font-family: var(--serif);
@@ -135,37 +140,48 @@ a{
 }
 
 
-/*Footer grid*/
+/* Footer grid */
 .footerGrid{
-    padding: 2rem;
-    color:var(--bg) ;
+    padding: clamp(2rem, 5vw, 5rem) var(--left-spacing);
+    color: var(--bg);
     background-color: var(--text);
-    font-family:"Helvetica Neue", Helvetica, sans-serif;
+    font-family: var(--brandfont);
     font-size: var(--text-footer);
-
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap:clamp(1rem, 1.5vw, 2rem);
-    max-width:100%;
-    padding:2rem var(--left-spacing) ;
-    align-self: center;
-    text-align: center;
-   
+    grid-template-columns: minmax(12rem, 0.8fr) repeat(2, minmax(0, 1fr));
+    column-gap: clamp(2rem, 7vw, 8rem);
+    row-gap: var(--space-lg);
+    align-items: start;
 }
 
-@media (max-width:768px){
-    .footerGrid{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap:clamp(1rem, 1.5vw, 2rem);
-        max-width:var(--width-content);
-        padding:2rem 2rem;
-        text-align: left;
-    }
+.footerGrid p,
+.footerGrid a{
+    color: var(--bg);
+    font-family: var(--brandfont);
+    font-size: var(--text-footer);
 }
-.footerGridElement{
-    text-align: center;
+
+.footerTitle{
+    margin: 0;
+    font-weight: 700;
 }
+
+.footerLabel{
+    margin-top: 0;
+    margin-bottom: var(--space-sm);
+    opacity: 0.65;
+}
+
+.footerGroup{
+    display: grid;
+    gap: var(--space-xs);
+}
+
+.footerGroup p,
+.footerGroup a{
+    margin-block: 0;
+}
+
 
 /*random but useful functions*/
 #incoming{
