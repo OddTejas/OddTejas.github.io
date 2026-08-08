@@ -6,6 +6,10 @@
     --accent: #E74C3C;
     --accent2:#262c3a;
     --accent2-light:#262c3ac8;
+    /*Fonts*/
+    --serif:"Playfair Display", serif;
+    --para:"Atkinson Hyperlegible",Arial, sans-serif;
+    --brandfont:"Helvetica Neue", Helvetica, Arial, sans-serif;
     /* Typography */
     --text-sm: 0.9rem;
     --text-base: 1rem;
@@ -37,7 +41,7 @@
 
     /* Spacing */
     --space-xs: .5rem;
-    --left-spacing: 2%;
+    --left-spacing: 4%;
     --space-sm: 1rem;
     --space-md: 2rem;
     --space-lg: 4rem;
@@ -53,7 +57,7 @@ body{
 
 .logoText{
     padding-left:var(--left-spacing) ;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--brandfont);
     font-weight: 700;
     color: var(--accent);
     font-size: var(--text-logo);
@@ -63,44 +67,43 @@ body{
 }
 
 .heroText{
-    font-family: "Playfair Display", serif;
+    font-family: var(--serif);
     font-size: var(--text-display);
     color:var(--text) ;
-    padding-left: var(--left-spacing);
 }
 #headingText{
-    font-family: "Playfair Display", serif;
+    font-family: var(--serif);
     font-size: var(--text-display);
     color:var(--text) ;
     padding-left: var(--left-spacing);
     margin-bottom: 0;
 }
 #subtext{
-    font-family: "Playfair Display", serif;
+    font-family: var(--serif);
     font-size: var(--text-subtitle);
     color:var(--text);
     padding-left: 4%;
     margin-top: 0%;
 }
 .main{
-    margin: var(--space-md);
+    margin: var(--left-spacing);
 }
 
 h1{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--brandfont);
     font-weight: 700;
     color:var(--accent);
 }
 
 h2{
-    font-family: "Playfair Display", serif;
-    font-size: var(--text-heading);
+    font-family: var(--serif);
+    font-size: var(--text-section-lead);
     color: var(--text);
     font-weight: 400;
 }
 
 p{
-    font-family: "Atkinson Hyperlegible","Playfair Display", serif;
+    font-family:var(--para);
     font-size: var(--text-body);
     color: var(--text);
     font-weight: 400;
@@ -110,12 +113,12 @@ p{
 }
 a{
     color: var(--accent);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--brandfont);
     text-decoration: none;
 }
 .link{
     color: var(--accent);
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: var(--brandfont);
     font-size: var(--text-link);
     text-decoration: none;
     position: relative;
@@ -133,7 +136,7 @@ a{
 
 
 /*Footer grid*/
-.footer{
+.footerGrid{
     padding: 2rem;
     color:var(--bg) ;
     background-color: var(--text);
@@ -151,7 +154,7 @@ a{
 }
 
 @media (max-width:768px){
-    .footer{
+    .footerGrid{
         display: grid;
         grid-template-columns: 1fr;
         gap:clamp(1rem, 1.5vw, 2rem);
@@ -191,4 +194,9 @@ iframe{
     border-radius: 18px;
     margin: var(--left-spacing);
 
+}
+/*text hireacry*/
+.actionPrompter{
+    font-size: var(--text-section-lead);
+    font-family: var(--serif);
 }
