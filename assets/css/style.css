@@ -62,7 +62,7 @@ body{
     
 }
 
-#heroText{
+.heroText{
     font-family: "Playfair Display", serif;
     font-size: var(--text-display);
     color:var(--text) ;
