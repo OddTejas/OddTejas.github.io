@@ -51,7 +51,7 @@ body{
     margin: 0;
 }
 
-#logoText{
+.logoText{
     padding-left:var(--left-spacing) ;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
@@ -133,7 +133,7 @@ a{
 
 
 /*Footer grid*/
-footer{
+.footer{
     padding: 2rem;
     color:var(--bg) ;
     background-color: var(--text);
@@ -151,7 +151,7 @@ footer{
 }
 
 @media (max-width:768px){
-    footer{
+    .footer{
         display: grid;
         grid-template-columns: 1fr;
         gap:clamp(1rem, 1.5vw, 2rem);
@@ -160,7 +160,7 @@ footer{
         text-align: left;
     }
 }
-.footerGridElements{
+.footerGridElement{
     text-align: center;
 }
 
