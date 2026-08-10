@@ -29,7 +29,7 @@
 </head>
 <body>
     <header>
-             <a class="logoText" href="/" aria-label="OddHouse home">OddHouse</a>
+             <a class="logoText" href="../index.html" aria-label="OddHouse home">OddHouse</a>
 
     </header>
     <main>
@@ -38,37 +38,48 @@
            <img src="../assets/images/heroPhoto.webp" alt="Hero Image" id="heroImage" fetchpriority="high">
         </section>
         <section class="main">
-            <section>
-                 <h1 class="heroText">Place to admire, appreciate and showcase photos</h1>
+            <section aria-labelledby="photography-title">
+                 <h1 class="heroText" id="photography-title">Place to admire, appreciate and showcase photos</h1>
                  <p>A notebook of photos over the span of half a decade. Watch me, who started no knowledge of this craft and a mobile; progess through and keep learning, keep experimenting and slowly learning my way.</p>
             </section>
-            
-            <section class="galleryRoom">
+            <!--Gallery rooms-->
+            <section class="galleryRoom" aria-labelledby="clouds-title">
+                <!--Title of rooms and buttions-->
                 <header class="roomHeader">
+                    <h2 id="clouds-title">Clouds</h2>
                     <p>Room 1 of 4</p>
-                    <h2>Clouds</h2>
                 </header>
+                <!--Div for rooms photos and layout-->
+                <div class="roomPhoto" >
                 <figure class="mainPhoto">
                     <img src="../assets/images/may_20.png"
                     loading="lazy"
                     alt="cloudy express of Vijaywada-hyderabad national highway">
-                    <figcaption>Vijaywada-hyderabad-expressway</figcaption>
+                    <figcaption>Vijaywada-Hyderabad-expressway</figcaption>
 
                 </figure>
-                <figure class="secondary_photo">
-                    <img src="../assets/images/hills_trip.webp"
+                 <figure class="auxPhoto">
+                    <img src="../assets/images/skyline.webp"
                     loading="lazy"
-                    alt="cloudy express of Vijaywada-hyderabad national highway">
-                    <figcaption>Vijaywada-hyderabad-expressway</figcaption>
+                    alt="Skyline of highrise with pretty clouds">
+                    <figcaption>Kukatpally, Hyderabad</figcaption>
 
                 </figure>
+                <figure class="auxPhoto">
+                    <img src="../assets/images/may18.webp"
+                    loading="lazy"
+                    alt="A brid in solitude with massive clouds behind">
+                    <figcaption>Kukatpally, Hyderabad</figcaption>
+
+                </figure>
+                </div>
             </section>
           
         </section>
 
     </main>
      <footer id="footer" class="footerGrid"></footer>
-     <script src="/assets/js/footer.js"></script>
+     <script src="../assets/js/footer.js"></script>
 
 </body>
 </html>

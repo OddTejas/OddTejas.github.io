@@ -36,19 +36,19 @@
         </header>
         <main>
             <section class="hero">     
-                <img src="assets/images/heroImage.webp" alt="Hero Image" id="heroImage" fetchpriority="high">
+                <img src="./assets/images/heroImage.webp" alt="Hero Image" id="heroImage" fetchpriority="high">
                 
              </section>
 
              <!--All the content which has a margin is put inside section with class main-->
             <section class="main">
 
-                <section>
-                    <h1 class="heroText">A place to show my love for mathematics, photography and curiosity.</h1>
+                <section aria-labelledby="home-title">
+                    <h1 class="heroText" id="home-title">A place to show my love for mathematics, photography and curiosity.</h1>
                 </section>
                 <section> 
                      <p id="nav_desc">Some quick links:</p>
-                    <nav class="navbar">
+                    <nav class="navbar" aria-label="Primary">
                    
                     <a href="projects/index.html" class="link">Projects</a>
                     <a href="maths/index.html" class="link">Mathematics</a>
@@ -57,7 +57,7 @@
                 </section>
                         
                 <!--About section with grid-->
-                <section id="about_grid">    
+                <section id="about_grid" aria-labelledby="label">
                     <article>
                     <h2 id="label">About me:</h2>
 
@@ -74,15 +74,15 @@
             <h2 id="desk">The Desk</h2>
             <p id="desk_desc">Current things on the desk:</p>
 
-                <section class="desk">
+                <section class="desk" aria-labelledby=" The desk">
                     <!--Flexbox for cards on the desk-->
-                    <article class="featuredCard">
-                        <h2 class="desk_heading">Thinking right now</h2>
+                    <article class="featuredCard" aria-labelledby="thinking-title">
+                        <h2 class="desk_heading" id="thinking-title">Thinking right now</h2>
                         <p class="desk_subheading">How do you teach a 4th grader maths for olympaid without rote learning?</p>
                     </article>
 
-                    <article class="card">
-                        <h2 class="desk_heading">Experiments</h2>
+                    <article class="card" aria-labelledby="experiments-title">
+                        <h2 class="desk_heading" id="experiments-title">Experiments</h2>
                         <p class="desk_subheading">How did the Hyd metro affect population density of hyd and did it have any effect over the 10 years?</p>
                     
                     </article>
@@ -100,7 +100,7 @@
     </main>
 
        <footer id="footer" class="footerGrid"></footer>
-     <script src="/assets/js/footer.js"></script>
+     <script src="./assets/js/footer.js"></script>
 
     </body>
     
