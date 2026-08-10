@@ -4,7 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OddHouse</title>
+    <title>Photography - OddHouse</title>
+    <meta name="description" content="A personal notebook of photographs by Evan Tejas, curated as quiet rooms to explore.">
+    <meta name="author" content="Evan Tejas">
+    <meta name="theme-color" content="#FFFAEF">
+    <link rel="canonical" href="https://oddtejas.github.io/photography/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="OddHouse">
+    <meta property="og:title" content="Photography - OddHouse">
+    <meta property="og:description" content="A personal notebook of photographs curated as quiet rooms to explore.">
+    <meta property="og:url" content="https://oddtejas.github.io/photography/">
+    <meta property="og:image" content="https://oddtejas.github.io/assets/images/heroPhoto.webp">
+    <meta property="og:image:alt" content="A photograph from the OddHouse photography archive">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photography - OddHouse">
+    <meta name="twitter:description" content="A personal notebook of photographs curated as quiet rooms to explore.">
+    <meta name="twitter:image" content="https://oddtejas.github.io/assets/images/heroPhoto.webp">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="../assets/css/photography.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,21 +29,39 @@
 </head>
 <body>
     <header>
-             <a href="../index.html"> <p class="logoText">OddHouse</p></a>
+             <a class="logoText" href="/" aria-label="OddHouse home">OddHouse</a>
 
     </header>
     <main>
-        <section>
+        <section class="hero">
             <!--Hero must be outside of main section for proper margin alignment-->
            <img src="../assets/images/heroPhoto.webp" alt="Hero Image" id="heroImage" fetchpriority="high">
         </section>
         <section class="main">
             <section>
-                 <p class="heroText">Place to admire, appreciate and showcase photos</p>
+                 <h1 class="heroText">Place to admire, appreciate and showcase photos</h1>
                  <p>A notebook of photos over the span of half a decade. Watch me, who started no knowledge of this craft and a mobile; progess through and keep learning, keep experimenting and slowly learning my way.</p>
             </section>
             
-            <section>
+            <section class="galleryRoom">
+                <header class="roomHeader">
+                    <p>Room 1 of 4</p>
+                    <h2>Clouds</h2>
+                </header>
+                <figure class="mainPhoto">
+                    <img src="../assets/images/may_20.png"
+                    loading="lazy"
+                    alt="cloudy express of Vijaywada-hyderabad national highway">
+                    <figcaption>Vijaywada-hyderabad-expressway</figcaption>
+
+                </figure>
+                <figure class="secondary_photo">
+                    <img src="../assets/images/hills_trip.webp"
+                    loading="lazy"
+                    alt="cloudy express of Vijaywada-hyderabad national highway">
+                    <figcaption>Vijaywada-hyderabad-expressway</figcaption>
+
+                </figure>
             </section>
           
         </section>
