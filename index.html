@@ -25,6 +25,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js"></script>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
 </head>
 
 
@@ -66,7 +69,8 @@
 
                     <article>
                         <h2 id="Evan">Hi I'm Evan Tejas </h2>
-                        <p id="aboutText"> I'm trying to build, learn and teach something. It maybe small or you might ask where this applies in real life, but to me it bring immence joy to learn and understand it.  </p>
+                        <p id="aboutText">I like to build things, ask question and teach it to others, my creations might be small or seemingly trivial, you might ask what is the practical use of it, but, is it really required to have a use? There is joy in building and
+                            appreciating something you built, obsessing over the smallest details.   </p>
                     </article>
                 </section>
 
@@ -74,17 +78,30 @@
             <h2 id="desk">The Desk</h2>
             <p id="desk_desc">Current things on the desk:</p>
 
-                <section class="desk" aria-labelledby=" The desk">
-                    <!--Flexbox for cards on the desk-->
-                    <article class="featuredCard" aria-labelledby="thinking-title">
+                <section class="desk" aria-labelledby="desk">
+                    <!--Grid for cards on the desk-->
+                    <article class="deskCard deskCard--featured" aria-labelledby="thinking-title">
                         <h2 class="desk_heading" id="thinking-title">Thinking right now</h2>
-                        <p class="desk_subheading">How do you teach a 4th grader maths for olympaid without rote learning?</p>
+                        <p class="desk_subheading">Is a solar powerplant a viable passive business?</p>
                     </article>
 
-                    <article class="card" aria-labelledby="experiments-title">
-                        <h2 class="desk_heading" id="experiments-title">Experiments</h2>
-                        <p class="desk_subheading">How did the Hyd metro affect population density of hyd and did it have any effect over the 10 years?</p>
-                    
+                    <article class="deskCard" aria-labelledby="experiments-title">
+                        <h2 class="desk_heading" id="experiments-title">Data experiments</h2>
+                        <p class="desk_subheading">Nothing currently</p>
+                    </article>
+                    <article class="deskCard" aria-labelledby="learning-title">
+                        <h2 class="desk_heading" id="learning-title">Currently learning</h2>
+                        <p class="desk_subheading">progressions and series</p>
+                    </article>
+                    <article class="deskCard deskCard--wide questionCard" aria-labelledby="question-title">
+                        <h2 class="desk_heading" id="question-title">Question of the month</h2>
+                        <div>
+                        <p class="desk_subheading">Question statement</p>
+                        <p class="desk_subheading">Let $k$ be a postive integer and $p$ be a prime number greater than 2. The sum of all divisors of $2^k p$ is <br>
+                        $$(x-1)(y+1)$$ where all the numbers include the 1 and the number itself. <br> Find x and y.
+                        </p>
+                    </div>
+                    <script defer src="/assets/js/maths.js"></script>
                     </article>
                    
                 </section>

@@ -17,7 +17,7 @@
 }
 #aboutText{
     font-size: var(--text-introduction);
-     font-family:  "Playfair Display", serif;
+     font-family: var(--para);
 }
 #label{
     margin: 0px;
@@ -50,14 +50,12 @@
 }
 
 
-/*flex box for the desk */
+/* Grid for the desk */
 .desk {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 2rem;
-
     margin: 2rem clamp(1rem,2vw, 3rem);
-  
 }
 
 
@@ -87,21 +85,50 @@
     font-family:  "Playfair Display", serif;
    
 }
-.featuredCard{
-     flex: 3 1 300px;
-
+.deskCard {
     padding: 1.5rem;
-    border-radius: 12px;
-    background:var(--accent2);
-   
-
+    border-radius: var(--radius);
+    background: var(--accent2-light);
 }
-.card {
-    flex: 1 1 300px;
 
-    padding: 1.5rem;
-    border-radius: 12px;
-    background:var(--accent2-light);
-    
-    
+.deskCard--featured {
+    grid-column: span 2;
+    background: var(--accent2);
+}
+
+.deskCard--wide {
+    grid-column: 1 / -1;
+    background: var(--accent2);
+}
+.questionCard > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: clamp(2rem, 5vw, 5rem);
+}
+.questionCard {
+    background: var(--accent2);
+}
+.questionCard .desk_subheading {
+    max-width: none;
+}
+@media (max-width: 700px) {
+    .desk {
+        grid-template-columns: 1fr;
+    }
+
+    .deskCard--featured,
+    .deskCard--wide {
+        grid-column: auto;
+    }
+
+    .questionCard > div {
+        grid-template-columns: 1fr;
+        gap: var(--space-sm);
+    }
+}
+
+@media (min-width: 701px) and (max-width: 900px) {
+    .desk {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }

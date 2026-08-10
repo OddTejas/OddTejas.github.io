@@ -55,8 +55,8 @@
 }
 @media (max-width: 700px) {
     .galleryRoom {
+        margin-top: 5rem;
         display: block;
         height: auto;
-        min-height: 100svh;
         overflow: visible;
     }}
