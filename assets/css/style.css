@@ -79,6 +79,7 @@ body{
 #heroImage{
      width: 100%;
     height: auto;
+    display: block;
 }
 #headingText{
     font-family: var(--serif);
