@@ -46,29 +46,37 @@
             <section class="galleryRoom" aria-labelledby="clouds-title">
                 <!--Title of rooms and buttions-->
                 <header class="roomHeader">
-                    <h2 id="clouds-title">Clouds</h2>
-                    <p>Room 1 of 4</p>
+                    <div>
+                        <h2 id="clouds-title"></h2>
+                        <p id="currentRoom" aria-live="polite"></p>
+                    
+                    </div>
+                    <div id="roomButton">
+                        <button id="prevButton" aria-label="Navigation for pervious room">
+                            Previous room
+                        </button>
+                        <button id="nextButton" aria-label="Navigation for Next room">
+                            Next room
+                        </button>
+                    </div>
                 </header>
                 <!--Div for rooms photos and layout-->
                 <div class="roomPhoto" >
-                <figure class="mainPhoto">
-                    <img src="../assets/images/may_20.png"
-                    loading="lazy"
-                    alt="cloudy express of Vijaywada-hyderabad national highway">
-                    <figcaption>Vijaywada-Hyderabad-expressway</figcaption>
+                <figure class="roomPhotoItem">
+                    <img
+                    loading="lazy">
+                    <figcaption></figcaption>
 
                 </figure>
-                 <figure class="auxPhoto">
-                    <img src="../assets/images/skyline.webp"
-                    loading="lazy"
-                    alt="Skyline of highrise with pretty clouds">
-                    <figcaption>Kukatpally, Hyderabad</figcaption>
+                 <figure class="roomPhotoItem">
+                    <img
+                    loading="lazy">
+                    <figcaption></figcaption>
 
                 </figure>
-                <figure class="auxPhoto">
-                    <img src="../assets/images/may18.webp"
-                    loading="lazy"
-                    alt="A brid in solitude with massive clouds behind">
+                <figure class="roomPhotoItem">
+                    <img
+                    loading="lazy">
                     <figcaption>Kukatpally, Hyderabad</figcaption>
 
                 </figure>
@@ -80,6 +88,7 @@
     </main>
      <footer id="footer" class="footerGrid"></footer>
      <script src="../assets/js/footer.js"></script>
+     <script type="module" src="../assets/js/galleryRenderer.js"></script>
 
 </body>
 </html>
