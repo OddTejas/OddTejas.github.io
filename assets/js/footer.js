@@ -2,7 +2,7 @@ const footer= document.querySelector('#footer');
 footer.innerHTML=
 `           <section class="footerBrand">
            <p class="footerTitle">OddHouse</p>
-                <p>Made with intention</p>
+                <p>Perspectives worth sharing.</p>
             </section>
 
             <section class="footerGroup">
