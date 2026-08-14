@@ -1,7 +1,7 @@
 export const rooms = [
     {
         id:"repetition",
-        title:"Repetition",
+        title:"Waves",
         columns: "1fr 1fr",
         rows: "1.3fr 0.8fr",
         photos:[
