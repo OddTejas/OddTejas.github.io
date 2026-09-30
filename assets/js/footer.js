@@ -7,7 +7,7 @@ footer.innerHTML=
 
             <section class="footerGroup">
                 <p class="footerLabel">Contact</p>
-                <a href="mailto:oddtejas.labs@gmail.com">oddtejas.labs@gmail.com</a>
+                <a href="mailto:oddtejas.lab@gmail.com">oddtejas.lab@gmail.com</a>
             </section>
 
             <section class="footerGroup">
