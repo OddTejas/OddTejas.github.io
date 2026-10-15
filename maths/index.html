@@ -41,13 +41,15 @@
             <section aria-labelledby="mathematics-title">
              <h1 class="heroText" id="mathematics-title">Things I found beautiful enough <br> to learn twice</h1>
             </section> 
-            <section aria-labelledby="featured-title">
-                    <h2 id="featured-title">
-                        Featured
-                    </h2>
-                    <section>
-                        <p id = "incoming">Hold on more stuff incoming</p>
-                    </section>
+            <section class="featuredGrid" aria-labelledby="featured-title">
+                <h2 id="featured-title">Featured</h2>
+                <div class="featuredArticles"></div>
+                <template id="featuredArticleTemplate">
+                    <article class="featuredArticle">
+                        <h3><a></a></h3>
+                        <p></p>
+                    </article>
+                </template>
             </section>
             <section> 
                     <nav class="navbar" aria-label="Mathematics topics">
@@ -69,6 +71,7 @@
     </main>
     <footer id="footer" class="footerGrid"></footer>
     <script src="/assets/js/footer.js"></script>
+    <script type="module" src="/assets/js/maths-featured-renderer.js"></script>
 
 </body>
 

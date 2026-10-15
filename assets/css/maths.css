@@ -1,53 +1,80 @@
+/* A section label beside a stack of text-only articles. */
+.featuredGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 2fr);
+    column-gap: clamp(2rem, 7vw, 8rem);
+    row-gap: var(--space-md);
+    align-items: start;
+    margin-block: var(--space-lg);
+}
+
+.featuredGrid > h2 {
+    margin: 0;
+}
+
+.featuredArticles {
+    display: grid;
+    gap: var(--space-md);
+    min-width: 0;
+}
+
+.featuredArticle h3,
+.topicArticle h3 {
+    margin: 0 0 var(--space-xs);
+    font-family: var(--serif);
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.featuredArticle h3 a,
+.topicArticle h3 a {
+    font-family: inherit;
+    color: var(--text);
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 1px;
+}
+
+.featuredArticle h3 a:hover,
+.featuredArticle h3 a:focus-visible,
+.topicArticle h3 a:hover,
+.topicArticle h3 a:focus-visible {
+    color: var(--accent);
+}
+
+.featuredArticle p,
+.topicArticle p {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .featuredGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .topicArticle {
+        row-gap: 0;
+    }
+}
 
 #wanderings{
     font-family: "Playfair Display", serif;
     font-size: var(--text-maths-heading);
     color: var(--text);
     font-weight: 400;
-    text-align: center;
-}
-.wander{
-    display: grid;
-    grid-template-columns:0.5fr;
-}
-@media(max-width: 768px){
-    .wander{
-        grid-template-columns: 1fr;
-    }
-}
-.mathCard{
-    background-color:var(--accent2);
-    border-radius: 18px;
-    border-color: var(--accent2-light);
-    
-
-}
-.cardTitle{
-    max-width: var(--width-card-text);
-    font-family:"Helvetica Neue", Helvetica, sans-serif ;
-    font-size: var(--text-maths-card-title);
-    color: var(--bg);
-    padding:1rem;
-    margin: 0;
-   
-    padding-bottom: 0;
-    max-width: var(--width-card-title);
     text-align: left;
 }
-.cardDesc{
-    max-width: var(--width-card-text);
-    font-family:"Playfair Display", serif;
-    font-size: var(--text-card-body);
-    color: var(--bg);
-    padding-left:2rem;
-    margin: 0;
-    padding-bottom: 0;
+.wander {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-lg);
+    margin-block: var(--space-md) var(--space-lg);
 }
-.cardLink{
-    color: var(--bg);
-    font-size: var(--text-card-link);
-    text-align: center;
 
-    padding-left: 5%;
+.topicArticle {
+    margin: 0;
+    min-width: 0;
 }
 

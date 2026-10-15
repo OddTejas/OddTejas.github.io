@@ -232,3 +232,14 @@ iframe{
     font-family: var(--serif);
 }
 
+@media (min-width: 1600px) {
+    .main {
+        margin-inline: clamp(4rem, 8vw, 12rem);
+    }
+}
+.quote{
+    font-family: var(--para);
+    font-size: var(--text-section-lead);
+    color: var(--text);
+    font-style: italic;
+}

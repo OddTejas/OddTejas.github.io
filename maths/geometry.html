@@ -44,26 +44,24 @@
                 <h1 class="heroText" id="geometry-title">Geometry <br> Lines, shapes and graphs</h1>
             </section> 
             <section>
-                <h2>"Geometry is an art of reasoning well from badly drawn figures." — Henri Poincaré</h2>
-                <p></p>
+                <p class="quote">"Geometry is an art of reasoning well from badly drawn figures." — Henri Poincaré</p>
             </section>
-            <p id="wanderings">Wanderings</p>
-            <section class="wander" aria-labelledby="wanderings">
-                
-                <article class="mathCard">
-                    <p class="cardTitle">How mathematicans cheat</p>
-                    <p class="cardDesc">How lazy maths change the surroundings when asked to change the point. </p>
-                    <a href="transformation.html" class="cardLink">click here for more</a>
-                </article>    
-            </section>
-            <section>
-                <p id = "incoming">Hold on more stuff incoming</p>
+            <section aria-labelledby="wanderings">
+                <h2 id="wanderings">Wanderings</h2>
+                <div class="wander" data-topic="geometry"></div>
+                <template id="topicArticleTemplate">
+                    <article class="featuredGrid topicArticle">
+                        <h3><a></a></h3>
+                        <p></p>
+                    </article>
+                </template>
             </section>
           
         </section>
     </main>
     <footer id="footer" class="footerGrid"></footer>
     <script src="../assets/js/footer.js"></script>
+    <script type="module" src="../assets/js/maths-topic-renderer.js"></script>
 
 </body>
 </html>
