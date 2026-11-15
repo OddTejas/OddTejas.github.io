@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>An inconvenient problem — OddHouse</title>
+    <meta name="description" content="An interactive OddHouse exploration of euclid's algorithm and the greatest common divisor.">
+    <meta name="author" content="Evan Tejas">
+    <meta name="theme-color" content="#FFFAEF">
+    <link rel="canonical" href="https://oddtejas.github.io/maths/euclid-algo.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="OddHouse">
+    <meta property="og:title" content="An inconvenient problem — OddHouse">
+    <meta property="og:description" content="An interactive exploration of euclid's algorithm and the greatest common divisor.">
+    <meta property="og:url" content="https://oddtejas.github.io/maths/euclid-algo.html">
+    <meta property="og:image" content="https://oddtejas.github.io/assets/images/heroImage.webp">
+    <meta property="og:image:alt" content="OddHouse hero artwork">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="An inconvenient problem — OddHouse">
+    <meta name="twitter:description" content="An interactive exploration of euclid's algorithm and the greatest common divisor.">
+    <meta name="twitter:image" content="https://oddtejas.github.io/assets/images/heroImage.webp">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/maths.css">
+    <link rel="stylesheet" href="/maths/src/math-3c.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <a class="logoText"href="/">OddHouse.</a>
+    </header>
+
+    <div class="article-layout">
+
+        <aside class="contents">
+            <ul>
+            <li><a href="#an-inconvenient-problem"
+            id="toc-an-inconvenient-problem">An inconvenient problem</a>
+            <ul>
+            <li><a
+            href="#find-the-greatest-common-factor-between-119-and-221"
+            id="toc-find-the-greatest-common-factor-between-119-and-221">Find
+            the greatest common factor between 119 and 221</a>
+            <ul>
+            <li><a href="#hidden-relationship"
+            id="toc-hidden-relationship">Hidden relationship</a></li>
+            </ul></li>
+            <li><a href="#but-why" id="toc-but-why">But why?</a></li>
+            <li><a href="#should-you-stop"
+            id="toc-should-you-stop">Should you stop?</a>
+            <ul>
+            <li><a href="#how-do-we-know-it-will-end"
+            id="toc-how-do-we-know-it-will-end">How do we know it will
+            end?</a></li>
+            </ul></li>
+            <li><a href="#next-steps" id="toc-next-steps">Next
+            steps</a></li>
+            </ul></li>
+            </ul>
+        </aside>
+
+        <article>
+            <h1 id="an-inconvenient-problem">An inconvenient
+            problem</h1>
+            <p>Suppose we were given an ordinary GCD problem</p>
+            <h2
+            id="find-the-greatest-common-factor-between-119-and-221">Find
+            the greatest common factor between 119 and 221</h2>
+            <p>The common method of finding factors does not seem to
+            work well for numbers like 119 and 221 where there are no
+            easily recognizable factors.</p>
+            <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>221</mn><mo>,</mo><mn>119</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>?</mi></mrow><annotation encoding="application/x-tex">\gcd(221,119) = ?</annotation></semantics></math>
+            Let us reframe the question with some simpler numbers:
+            <strong>21 and 14</strong>. Factoring tells us the
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>21</mn><mo>,</mo><mn>14</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">\gcd(21,14) = 7</annotation></semantics></math></p>
+            <p>Now, observe what we are about to do. First subtract the
+            two number.
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>21</mn><mo>−</mo><mn>14</mn><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">21 - 14 = 7</annotation></semantics></math>
+            Interesting, the new number we get is also divisible by the
+            GCD of the two numbers. Does this hold true for multiple
+            numbers, lets check.</p>
+            <table>
+            <colgroup>
+            <col style="width: 33%" />
+            <col style="width: 33%" />
+            <col style="width: 33%" />
+            </colgroup>
+            <thead>
+            <tr>
+            <th>Numbers</th>
+            <th>GCD</th>
+            <th>Difference</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>30</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(30,5)</annotation></semantics></math></td>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>5</mn><annotation encoding="application/x-tex">5</annotation></semantics></math></td>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>25</mn><annotation encoding="application/x-tex">25</annotation></semantics></math></td>
+            </tr>
+            <tr>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>100</mn><mo>,</mo><mn>10</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(100,10)</annotation></semantics></math></td>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>10</mn><annotation encoding="application/x-tex">10</annotation></semantics></math></td>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>90</mn><annotation encoding="application/x-tex">90</annotation></semantics></math></td>
+            </tr>
+            <tr>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>16</mn><mo>,</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(16,4)</annotation></semantics></math></td>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4</mn><annotation encoding="application/x-tex">4</annotation></semantics></math></td>
+            <td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>12</mn><annotation encoding="application/x-tex">12</annotation></semantics></math></td>
+            </tr>
+            </tbody>
+            </table>
+            <p>Yes! All of following are also divisible by their
+            GCD.</p>
+            <h3 id="hidden-relationship">Hidden relationship</h3>
+            <p>From our trials we can see how there is a relationship
+            between the difference and GCD of two numbers. Then does
+            this suggest that can convert this bigger problem into a
+            simpler one while preserving the common factors, think about
+            that for a minute, two pairs of numbers, one simpler and one
+            larger and both having the same answer. We will experiment
+            about this.</p>
+            <p>By this logic we can rewrite,</p>
+            <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>221</mn><mo>,</mo><mn>119</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>119</mn><mo>,</mo><mn>102</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(221,119) = \gcd(119,102)</annotation></semantics></math>
+            which is not that much easier to the original question, but
+            can we subtract these two number again? Yes, we can and
+            doing so we get
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>102</mn><mo>,</mo><mn>17</mn><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>17</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+             &amp; = \gcd(102,17) \\
+             &amp; = 17
+            \end{aligned}</annotation></semantics></math> Doing a quick
+            check we see
+            102=<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mo>*</mo><mn>17</mn></mrow><annotation encoding="application/x-tex">6 \ast 17</annotation></semantics></math>
+            we see 17 as the highest common factor and as we have noted
+            above how there exists a relationship we can also say,
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>221</mn><mo>,</mo><mn>119</mn><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>119</mn><mo>,</mo><mn>102</mn><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>102</mn><mo>,</mo><mn>17</mn><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>17</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+             &amp; \gcd(221,119) \\
+             &amp; = \gcd(119,102) \\
+             &amp; = \gcd(102,17) \\
+             &amp; = 17
+            \end{aligned}</annotation></semantics></math></p>
+            <p>From our little example we can come to the conclusion
+            that <strong>GCD of two numbers is equal to GCD of the
+            difference and any of the two numbers </strong>
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>30</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>25</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\gcd(30,5) = \gcd(25,5) = 5</annotation></semantics></math></p>
+            <h2 id="but-why">But why?</h2>
+            <p>Can we prove that this method will work for any pair of
+            positive integers?</p>
+            <p>For that we need to define what a common factor is. A
+            common factor is a number that divides both number without a
+            remainder i.e the remainder must be 0. Suppose there are two
+            numbers
+            <strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">ad</annotation></semantics></math></strong>
+            and
+            <strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">cd</annotation></semantics></math></strong>
+            such that
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+            is the highest common factor and
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a,c</annotation></semantics></math>
+            are coprime
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>d</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>d</mi></mrow><annotation encoding="application/x-tex">\gcd(ad,cd) = d</annotation></semantics></math>
+            Now lets subtract the two numbers, assuming
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>≥</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a \geq c</annotation></semantics></math>.
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>−</mo><mi>c</mi><mi>d</mi><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">ad - cd = d(a - c)</annotation></semantics></math>
+            Aha! Subtracting preserved the common factor. lets us also
+            add
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi><mo>+</mo><mi>c</mi><mi>d</mi><mo>=</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>c</mi><mo>+</mo><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">ad + cd = d(c + a)</annotation></semantics></math>
+            which also preserved the common factor, but we have to
+            confirm that this process did not create a new common
+            factor. Lets check for that too.</p>
+            <p>Suppose when we subtracted the numbers it brought some
+            new factors then that new common factor must divide the two
+            numbers
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>c</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">d(a - c),cd</annotation></semantics></math>
+            and their sum too as we have seen addition also preserves
+            common factors.
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>c</mi><mi>d</mi><mo>=</mo><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">d(a - c) + cd = ad</annotation></semantics></math></p>
+            <p>However, this means that the supposedly new common factor
+            divides both
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">ad</annotation></semantics></math>
+            and
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">cd</annotation></semantics></math>,
+            the two numbers we started with. So was it ever a new common
+            factor?</p>
+            <p>Every common factor that exists after subtraction was
+            there from the very beginning and every original common
+            factor is preserved by subtraction.Then we can say, no
+            common factors are created or lost, and the greatest common
+            factor remains unchanged.</p>
+            <p>Thus
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>d</mi><mo>,</mo><mi>c</mi><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>c</mi><mi>d</mi><mo stretchy="false" form="postfix">)</mo></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>d</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+             &amp; \gcd(ad,cd) \\
+             &amp; = \gcd(d(a - c),cd) \\
+             &amp; = d
+            \end{aligned}</annotation></semantics></math> where d is the
+            highest common factor. We can also Add, for any two numbers
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>+</mo><mi>b</mi><mo>,</mo><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(a,b) = \gcd(a + b,b)</annotation></semantics></math>
+            but we don’t usually use this as it makes the numbers larger
+            which is of no use when we want to simplify the
+            expression</p>
+            <h2 id="should-you-stop">Should you stop?</h2>
+            <p>When should we stop the process? You can repeat this
+            process till the GCD can be easily recognized or when one of
+            the numbers equals 0. When one of the numbers equals 0, the
+            other number is the GCD. For example
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>5</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\gcd(5,0) = 5</annotation></semantics></math>
+            and
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo>,</mo><mn>5</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\gcd(0,5) = 5</annotation></semantics></math>.</p>
+            <h3 id="how-do-we-know-it-will-end">How do we know it will
+            end?</h3>
+            <p>In this process we are always subtracting the smaller
+            number from the larger. Since both numbers are positive
+            integers, each subtraction decreases their sum. This process
+            cannot continue forever and eventually one of the numbers
+            must become 0.</p>
+            <h2 id="next-steps">Next steps</h2>
+            <p>Now for some longer question repeatedly subtracting can
+            get tedious and so we divide and take remainders as
+            shortcut.</p>
+            <p>For example, consider
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>40</mn><mo>,</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(40,4)</annotation></semantics></math>.
+            Instead of subtracting 4 from 40 ten times, we can simply
+            divide, which is shown below.
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>40</mn><mo>=</mo><mn>10</mn><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">40 = 10(4) + 0</annotation></semantics></math>
+            which gives us
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(4,0)</annotation></semantics></math>
+            and thus GCD is 4.</p>
+            <p>Lets try 42,12</p>
+            <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>42</mn><mo>,</mo><mn>12</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(42,12)</annotation></semantics></math></p>
+            <p>Using our original method of we get
+            <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>42</mn><mo>−</mo><mn>12</mn><mo>−</mo><mn>12</mn><mo>−</mo><mn>12</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>6</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>42</mn><mo>−</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mo stretchy="false" form="postfix">)</mo></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>6</mn></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><mn>42</mn></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+            42 - 12 - 12 - 12 &amp; = 6 \\
+            42 - 3(12) &amp; = 6 \\
+            42 &amp; = 3(12) + 6
+            \end{aligned}</annotation></semantics></math></p>
+            <p>Notice how we had to subtract 12 three times to get 6 as
+            an answer. Instead of repeated arithmetic, we could simply
+            divide 42 by 12 and take the remainder.</p>
+            <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>42</mn><mo>=</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">42 = 3(12) + 6</annotation></semantics></math></p>
+            <p>Now we can rearrange the GCD problem as
+            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mo>,</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\gcd(12,6)</annotation></semantics></math>
+            And now by looking we can guess the GCD must be 6, using the
+            algorithm once again we obtain</p>
+            <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>12</mn><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">12 = 2(6) + 0</annotation></semantics></math></p>
+            <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>12</mn><mo>,</mo><mn>6</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">gcd</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mn>6</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>6</mn></mrow><annotation encoding="application/x-tex">\gcd(12,6) = \gcd(6,0) = 6</annotation></semantics></math></p>
+            <p>Division is not a new method, its is just repeated
+            substraction, that makes our method faster and easier. Thus
+            we no need to prove this seperately.</p>
+            <p>So <strong>Division</strong> is the next step of making
+            this method even faster, by doing so we have reinvented the
+            Euclidean algorithm.</p>
+        </article>
+
+    </div>
+
+</body>
+</html>
