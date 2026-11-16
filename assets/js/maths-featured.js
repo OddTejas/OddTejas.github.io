@@ -12,7 +12,7 @@ export const articles =[
         title:"An inconvenient problem",
         descriptions:"An interactive exploration of euclid's algorithm and the greatest common divisor.",
         section:"number-theory",
-        url:"/maths/euclid-algo.html",
+        url:"/maths/number-thoery/euclid-algo.html",
         position:1,    
     }
 ]

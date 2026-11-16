@@ -1,6 +1,7 @@
 = An inconvenient problem
-Suppose we were given an ordinary GCD problem
-== Find the greatest common factor between 119 and 221 
+Suppose we were given an ordinary GCD problem:
+== Question Statement
+Find the greatest common factor between 119 and 221 
 
 The common method of finding factors does not seem to work well for numbers like 119 and 221 where there are no easily recognizable factors.
 
@@ -55,7 +56,7 @@ lets us also add
 $ a d + c d=d(c+a) $
 which also preserved the common factor, but we have to confirm that this process did not create a new common factor. Lets check for that too.
 
-Suppose when we subtracted the numbers it brought some new factors then that new common factor must divide the two numbers $d(a-c), c d$ and their sum too as we have seen addition also preserves common factors.
+Suppose when we subtracted the numbers it brought some new factors then, lets add them back, as we have noted how addition preserved the existing factors, any new new factor introduced by subtraction must be present even when we add them. Doing so we get only d as the highest common factor, as we can see below.
 $ d(a-c)+c d=a d $
 
 However, this means that the supposedly new common factor divides both $a d$ and $c d$, the two numbers we started with. So was it ever a new common factor?

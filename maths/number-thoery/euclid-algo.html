@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="robots" content="noindex, nofollow">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>An inconvenient problem — OddHouse</title>
+    <title>An Inconvenient Problem — OddHouse</title>
     <meta name="description" content="An interactive OddHouse exploration of euclid's algorithm and the greatest common divisor.">
     <meta name="author" content="Evan Tejas">
     <meta name="theme-color" content="#FFFAEF">
     <link rel="canonical" href="https://oddtejas.github.io/maths/euclid-algo.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="OddHouse">
-    <meta property="og:title" content="An inconvenient problem — OddHouse">
+    <meta property="og:title" content="An Inconvenient Problem — OddHouse">
     <meta property="og:description" content="An interactive exploration of euclid's algorithm and the greatest common divisor.">
     <meta property="og:url" content="https://oddtejas.github.io/maths/euclid-algo.html">
     <meta property="og:image" content="https://oddtejas.github.io/assets/images/heroImage.webp">
     <meta property="og:image:alt" content="OddHouse hero artwork">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="An inconvenient problem — OddHouse">
+    <meta name="twitter:title" content="An Inconvenient Problem — OddHouse">
     <meta name="twitter:description" content="An interactive exploration of euclid's algorithm and the greatest common divisor.">
     <meta name="twitter:image" content="https://oddtejas.github.io/assets/images/heroImage.webp">
     <link rel="stylesheet" href="/assets/css/style.css">
@@ -26,6 +28,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <header class="navbar">
@@ -39,10 +42,8 @@
             <li><a href="#an-inconvenient-problem"
             id="toc-an-inconvenient-problem">An inconvenient problem</a>
             <ul>
-            <li><a
-            href="#find-the-greatest-common-factor-between-119-and-221"
-            id="toc-find-the-greatest-common-factor-between-119-and-221">Find
-            the greatest common factor between 119 and 221</a>
+            <li><a href="#question-statement"
+            id="toc-question-statement">Question Statement</a>
             <ul>
             <li><a href="#hidden-relationship"
             id="toc-hidden-relationship">Hidden relationship</a></li>
@@ -62,12 +63,11 @@
         </aside>
 
         <article>
-            <h1 id="an-inconvenient-problem">An inconvenient
-            problem</h1>
-            <p>Suppose we were given an ordinary GCD problem</p>
-            <h2
-            id="find-the-greatest-common-factor-between-119-and-221">Find
-            the greatest common factor between 119 and 221</h2>
+            <h1 id="an-inconvenient-problem">An Inconvenient
+            Problem</h1>
+            <p>Suppose we were given an ordinary GCD problem:</p>
+            <h2 id="question-statement">Question Statement</h2>
+            <p>Find the greatest common factor between 119 and 221</p>
             <p>The common method of finding factors does not seem to
             work well for numbers like 119 and 221 where there are no
             easily recognizable factors.</p>
@@ -171,11 +171,11 @@
             confirm that this process did not create a new common
             factor. Lets check for that too.</p>
             <p>Suppose when we subtracted the numbers it brought some
-            new factors then that new common factor must divide the two
-            numbers
-            <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>,</mo><mi>c</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">d(a - c),cd</annotation></semantics></math>
-            and their sum too as we have seen addition also preserves
-            common factors.
+            new factors then, lets add them back, as we have noted how
+            addition preserved the existing factors, any new new factor
+            introduced by subtraction must be present even when we add
+            them. Doing so we get only d as the highest common factor,
+            as we can see below.
             <math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mo>−</mo><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>c</mi><mi>d</mi><mo>=</mo><mi>a</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">d(a - c) + cd = ad</annotation></semantics></math></p>
             <p>However, this means that the supposedly new common factor
             divides both
